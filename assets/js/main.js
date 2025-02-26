@@ -37,7 +37,28 @@ const blurHeader = () =>{
 window.addEventListener('scroll', blurHeader)
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-message')
 
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    // serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_jgpdn3l', 'template_paqrfwp', '#contact-form', 'cuCnx4t2E7Zb1WUf_')
+        .then(() =>
+            // Show sent message
+            contactMessage.textContent = 'Message sent succesfully ✅'
+            
+            // Remove message after five seconds
+
+            
+        ), () =>{
+            // // Show error message
+            contactMessage.textContent = 'Message not sent (service error) ❌'
+        }
+}
+
+contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
