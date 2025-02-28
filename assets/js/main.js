@@ -38,25 +38,32 @@ window.addEventListener('scroll', blurHeader)
 
 /*=============== EMAIL JS ===============*/
 const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-message')
+      contactMessage = document.getElementById('contact-message');
 
-const sendEmail = (e) =>{
-    e.preventDefault()
+const sendEmail = (e) => {
+    e.preventDefault();
 
     // serviceID - templateID - #form - publicKey
     emailjs.sendForm('service_jgpdn3l', 'template_paqrfwp', '#contact-form', 'cuCnx4t2E7Zb1WUf_')
-        .then(() =>
+        .then(() => {
             // Show sent message
-            contactMessage.textContent = 'Message sent succesfully ✅'
-            
-            // Remove message after five seconds
+            contactMessage.textContent = 'Message sent successfully ✅';
 
-            
-        ), () =>{
-            // // Show error message
-            contactMessage.textContent = 'Message not sent (service error) ❌'
-        }
+            // Remove message after five seconds
+            setTimeout(() => {
+                contactMessage.textContent = '';
+            }, 5000);
+
+            // Clear input fields
+            contactForm.reset()
+
+        })
+        .catch(() => { // ✅ Gunakan .catch() untuk menangkap error
+            // Show error message
+            contactMessage.textContent = 'Message not sent (service error) ❌';
+        });
 }
+
 
 contactForm.addEventListener('submit', sendEmail)
 
