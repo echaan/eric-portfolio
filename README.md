@@ -5,7 +5,7 @@ Website portofolio pribadi yang menampilkan proyek, pengalaman, dan keterampilan
 
 ## 📌 Features
 - Desain responsif menggunakan HTML, CSS, dan Bootstrap
-- Halaman tentang saya, proyek, dan kontak (Not Complete)
+- Halaman tentang saya, proyek, dan kontak
 - Efek animasi dan interaktif menggunakan JavaScript (Not Complete)
 
 ## 📂 Project Structure
