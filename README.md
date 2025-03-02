@@ -1,12 +1,12 @@
 # Portfolio Website
 
 ## 🚀 Overview
-Website portofolio pribadi yang menampilkan proyek, pengalaman, dan keterampilan saya di bidang pengembangan web dan teknologi informasi.
+A personal portfolio website showcasing my projects, experience, and skills in web development and information technology.
 
 ## 📌 Features
-- Desain responsif menggunakan HTML, CSS, dan Bootstrap
-- Halaman tentang saya, proyek, dan kontak
-- Efek animasi dan interaktif menggunakan JavaScript (Not Complete)
+- Responsive design using HTML, CSS, and Bootstrap  
+- About me, projects, and contact pages  
+- Scroll reveal animation effects  
 
 ## 📂 Project Structure
 ```
