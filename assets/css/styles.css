@@ -643,7 +643,20 @@ svg {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+  .container{
+    margin-inline: 1rem;
+  }
 
+  .skills__content{
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+  }
+
+  .services__card{
+    padding-block: 1.5rem;
+  }
+}
 
 /* For medium devices */
 
