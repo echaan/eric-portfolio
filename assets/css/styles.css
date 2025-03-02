@@ -19,8 +19,8 @@
       -> Copy the color mode (HSL)
   */
 
-  --hue: 162;
-  --first-color: hsl(var(--hue), 100%, 40%);
+  --hue: 210;
+  --first-color: hsl(var(--hue), 100%, 70%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
@@ -171,7 +171,11 @@ svg {
 }
 .nav__logo{
   color: var(--title-color);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0.5rem;
 }
 
 .nav__logo span{
@@ -184,6 +188,10 @@ svg {
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;
+}
+
+.nav__icon{
+  height: calc(var(--header-height) - 1rem);
 }
 
 /* Navigation for mobile devices */
@@ -222,6 +230,10 @@ svg {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
+}
+
+.nav__icon{
+  height: calc(var(--header-height) - 2rem);
 }
 
 /* Show menu */
