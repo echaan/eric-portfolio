@@ -3,6 +3,8 @@
 ## 🚀 Overview
 A personal portfolio website showcasing my projects, experience, and skills in web development and information technology.
 
+🌐 **Live Demo:** [Visit Here](https://echaan.github.io/eric-portfolio/)
+
 ## 📌 Features
 - Responsive design using HTML, CSS, and Bootstrap  
 - About me, projects, and contact pages  
@@ -14,3 +16,4 @@ A personal portfolio website showcasing my projects, experience, and skills in w
 |-- index.html      # Halaman utama
 |-- README.md       # Dokumentasi ini
 ```
+
