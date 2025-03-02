@@ -415,9 +415,6 @@ svg {
 }
 
 /*=============== PROJECTS ===============*/
-.projects{
-  background-color: var(--container-color);
-}
 
 .projects__container{
   row-gap: 2rem;
@@ -487,6 +484,10 @@ svg {
 }
 
 /*=============== CONTACT ===============*/
+.contact{
+  background-color: var(--container-color);
+}
+
 .contact__container{
   padding-top: 1rem;
 }
@@ -504,7 +505,7 @@ svg {
 .contact__input{
   padding: 1rem 1.25rem;
   border-radius: .5rem;
-  background-color: var(--container-color);
+  background-color: var(--body-color);
   color: var(--title-color);
 }
 
@@ -533,7 +534,6 @@ svg {
 
 /*=============== FOOTER ===============*/
 .footer{
-  background-color: var(--container-color);
   padding-block: 3.5rem 2rem;
 }
 
