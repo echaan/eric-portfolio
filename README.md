@@ -14,7 +14,7 @@ A personal portfolio website showcasing my projects, experience, and skills in w
 
 ## Project Structure
 ```
-|-- /assets         # File CSS, JavaScript, dan gambar
-|-- index.html      # Halaman utama
-|-- README.md       # Dokumentasi ini
+|-- /assets         # CSS, JavaScript, & image
+|-- index.html      # Main page
+|-- README.md       # This Documentation
 ```
