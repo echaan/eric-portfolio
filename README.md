@@ -16,5 +16,5 @@ A personal portfolio website showcasing my projects, experience, and skills in w
 ```
 |-- /assets         # CSS, JavaScript, & image
 |-- index.html      # Main page
-|-- README.md       # This Documentation
+|-- README.md       # This Documentation 
 ```
