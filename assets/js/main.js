@@ -113,43 +113,68 @@ sr.reveal('.about__data, .skills__data', { origin: 'left' });
 sr.reveal('.about__image, .skills__content', { origin: 'right' });
 sr.reveal('.projects__card', { interval: 100 });
 
- // Inisialisasi semua swiper di modal
-  const projectSwipers = document.querySelectorAll('.projectSwiper');
-  projectSwipers.forEach(swiperEl => {
-    new Swiper(swiperEl, {
-      loop: true,
-      pagination: { 
-        el: swiperEl.querySelector('.swiper-pagination'),
-        clickable: true 
-      },
-      navigation: {
-        nextEl: swiperEl.querySelector('.swiper-button-next'),
-        prevEl: swiperEl.querySelector('.swiper-button-prev'),
-      },
-    });
+/*=============== INITIATE SWIPER ON MODAL ===============*/
+const projectSwipers = document.querySelectorAll('.projectSwiper');
+projectSwipers.forEach(swiperEl => {
+  new Swiper(swiperEl, {
+    loop: true,
+    pagination: { 
+      el: swiperEl.querySelector('.swiper-pagination'),
+      clickable: true 
+    },
+    navigation: {
+      nextEl: swiperEl.querySelector('.swiper-button-next'),
+      prevEl: swiperEl.querySelector('.swiper-button-prev'),
+    },
   });
+});
 
-  // ===== Modal handler =====
-  const projectCards = document.querySelectorAll('.projects__card');
-  const modals = document.querySelectorAll('.modal');
+/*=============== MODAL HANDLER ===============*/
+const projectCards = document.querySelectorAll('.projects__card');
+const modals = document.querySelectorAll('.modal');
 
-  projectCards.forEach((card, index) => {
-    card.addEventListener('click', () => {
-      modals[index].style.display = 'block';
-    });
+projectCards.forEach((card, index) => {
+  card.addEventListener('click', () => {
+    modals[index].style.display = 'block';
   });
+});
 
-  const closeBtns = document.querySelectorAll('.modal__close');
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.modal').style.display = 'none';
-    });
+const closeBtns = document.querySelectorAll('.modal__close');
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.modal').style.display = 'none';
   });
+});
 
-  window.addEventListener('click', (e) => {
-    modals.forEach(modal => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+window.addEventListener('click', (e) => {
+  modals.forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
   });
+});
+
+/*=============== IMAGE CLICK SLIDER ===============*/
+const imgModal = document.getElementById('imgModal');
+const imgModalContent = document.getElementById('imgModalContent');
+const imgClose = document.querySelector('.img-modal__close');
+
+// klik di gambar slider untuk buka modal fullscreen
+document.querySelectorAll('.projectSwiper .swiper-slide img').forEach(img => {
+  img.addEventListener('click', () => {
+    imgModal.style.display = 'flex';
+    imgModalContent.src = img.src;
+  });
+});
+
+// klik tombol close
+imgClose.addEventListener('click', () => {
+  imgModal.style.display = 'none';
+});
+
+// klik di luar gambar modal (overlay) untuk menutup
+imgModal.addEventListener('click', (e) => {
+  if (e.target === imgModal) {
+    imgModal.style.display = 'none';
+  }
+});

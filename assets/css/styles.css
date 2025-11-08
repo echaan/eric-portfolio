@@ -685,8 +685,7 @@ svg {
   }
 
   .modal__info {
-    padding: 1rem;
-    max-width: 90%;
+    padding: 0 3rem 0 1rem;
   }
 
   .modal__info h2 {
@@ -898,10 +897,6 @@ svg {
   color: var(--first-color);
 }
 
-.modal__info {
-  margin-top: 1.5rem;
-}
-
 .swiper {
   width: 100%;
   border-radius: 1rem;
@@ -933,8 +928,7 @@ svg {
 }
 
 .modal__info {
-  margin-top: 1.5rem;
-  text-align: left;
+  text-align: justify;
   color: var(--text-color);
   width: 100%;
   line-height: 1.6;
@@ -1014,9 +1008,9 @@ svg {
   border-radius: 0.6rem;
   background-color: var(--first-color);
   color: #fff;
-  font-weight: 600;
+  font-weight: var(--font-regular);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--small-font-size);
   transition: all 0.25s ease;
 }
 
@@ -1053,3 +1047,39 @@ svg {
   transition: transform .3s ease;
 }
 
+/* ===================== FULLSCREEN IMAGE MODAL ===================== */
+.img-modal {
+  display: none; /* hidden by default, penting! */
+  position: fixed;
+  z-index: 9999;
+  inset: 0; /* shorthand top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  overflow: auto; /* biar bisa scroll / pinch zoom di mobile */
+}
+
+.img-modal__content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: block;
+  margin: auto;
+  cursor: default; /* tidak ada zoom JS */
+}
+
+.img-modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.img-modal__close:hover {
+  transform: scale(1.2);
+}
