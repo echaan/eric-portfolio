@@ -911,9 +911,9 @@ svg {
 
 .modal__close {
   position: absolute;
-  top: 0;
+  top: 1rem;
   right: 1.5rem;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--title-color); 
   cursor: pointer;
@@ -1046,6 +1046,39 @@ svg {
   border-radius: 1rem;
   transition: transform .3s ease;
 }
+
+/* Tombol navigasi Swiper yang ada di modal */
+.projectSwiper .swiper-button-next,
+.projectSwiper .swiper-button-prev {
+  width: 2rem;                   /* Lebar tombol lebih proporsional */
+  height: 2rem;                  /* Tinggi tombol */
+  color: var(--first-color);     /* Warna panah */
+  background: rgba(0,0,0,0.2);   /* background semi-transparan */
+  border-radius: 50%;            /* Bulat */
+  top: 50%;                      /* Vertikal di tengah */
+  transform: translateY(-50%);
+}
+
+.projectSwiper .swiper-button-next {
+  right: 0.5rem;                 /* Sedikit masuk dari kanan */
+}
+
+.projectSwiper .swiper-button-prev {
+  left: 0.5rem;                  /* Sedikit masuk dari kiri */
+}
+
+.projectSwiper .swiper-button-next:hover,
+.projectSwiper .swiper-button-prev:hover {
+  background-color: var(--first-color); /* Hover lebih jelas */
+  color: #fff;
+  transform: translateY(-50%) scale(1.1); /* Hover scale halus */
+}
+
+.projectSwiper .swiper-button-next::after,
+.projectSwiper .swiper-button-prev::after {
+  font-size: 1.2rem;  /* ukuran ikon panah */
+}
+
 
 /* ===================== FULLSCREEN IMAGE MODAL ===================== */
 .img-modal {
