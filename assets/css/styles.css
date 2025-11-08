@@ -886,10 +886,9 @@ svg {
 
 .modal__close {
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 2rem;
+  font-size: var(--smaller-font-size);
   cursor: pointer;
+  font-weight: var(--font-regular);
   color: var(--title-color);
   transition: color .3s;
 }
@@ -928,7 +927,7 @@ svg {
 }
 
 .modal__info {
-  text-align: justify;
+  text-align: left;
   color: var(--text-color);
   width: 100%;
   line-height: 1.6;
@@ -944,6 +943,7 @@ svg {
 
 .modal__info p {
   margin-bottom: 0.8rem;
+  text-align: justify;
 }
 
 .modal__info p strong {
@@ -980,7 +980,7 @@ svg {
   color: var(--first-color);
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
-  font-size: 0.875rem;
+  font-size: var(--smaller-font-size);
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.2s ease;
   user-select: none;
