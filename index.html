@@ -241,6 +241,70 @@
             </h2>
 
             <div class="projects__container container grid">
+
+               <!-- -------------- Spotify Sentiment -------------- -->
+               <article class="projects__card">
+                  <img src="assets/img/spotify-sentiment-cover.jpg" alt="projects image" class="projects__img">
+
+                  <div class="projects__modal">
+                     <span class="projects__subtitle">Deep Learning</span>
+
+                     <h3 class="projects__title">Spotify Sentiment</h3>
+                  </div>
+               </article>
+
+               <!--  +++ MODAL+++  -->
+               <div id="modal-housingPrice" class="modal">
+               <div class="modal__content">
+                  <span class="modal__close">&times;</span>
+
+                  <!-- Swiper slider -->
+                  <div class="swiper projectSwiper">
+                     <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <img src="assets/img/spotify-sentiment-4.png" alt="Spotify Sentiment Data Screenshot 1" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="assets/img/spotify-sentiment.png" alt="Spotify Sentiment Data Screenshot 5" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="assets/img/spotify-sentiment-1.jpg" alt="Spotify Sentiment Data Screenshot 2" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="assets/img/spotify-sentiment-2.jpg" alt="Spotify Sentiment Data Screenshot 3" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="assets/img/spotify-sentiment-3.png" alt="Spotify Sentiment Data Screenshot 4" />
+                     </div>
+                     </div>
+
+                     <div class="swiper-pagination"></div>
+                     <div class="swiper-button-next"></div>
+                     <div class="swiper-button-prev"></div>
+                  </div>
+
+                  <!-- Info project -->
+                  <div class="modal__info">
+                     <div class="tech-stack">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>NLTK</span>
+                        <span>Sastrawi</span>
+                        <span>Google Play Scraper</span>
+                     </div>
+                     <h2>Spotify App Review Sentiment Analysis</h2>
+                     <p>
+                        Analyzed 10,000+ Google Play Store reviews to understand public sentiment towards the Spotify app. This project involved scraping live user data, performing complex NLP preprocessing for Indonesian text (using NLTK & Sastrawi), and comparing three deep learning models (LSTM, CNN, GRU). The resulting LSTM model successfully classifies user sentiment with 93% accuracy.
+                     </p>
+                     
+                     <div class="project-links">
+                        <a href="https://github.com/echaan/spotify-analysis-sentiment" target="_blank">
+                           <i class="ri-github-fill"></i> Repository
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               </div>
                
                <!-- -------------- Bag Synthetic -------------- -->
                <article class="projects__card">
@@ -284,11 +348,8 @@
                   <div class="modal__info">
                      <div class="tech-stack">
                         <span>Python</span>
-                        <span>pandas</span>
-                        <span>NumPy</span>
-                        <span>matplotlib</span>
+                        <span>Scikit-learn</span>
                         <span>TensorFlow</span>
-                        <span>Keras</span>
                         <span>Jupyter Notebook</span>
                      </div>
                      <h2>Bag Synthetic Images Classification</h2>
@@ -357,9 +418,7 @@
                      <div class="tech-stack">
                         <span>Python</span>
                         <span>pandas</span>
-                        <span>NumPy</span>
                         <span>matplotlib</span>
-                        <span>seaborn</span>
                         <span>scikit-learn</span>
                         <span>Jupyter Notebook</span>
                      </div>
