@@ -178,3 +178,48 @@ imgModal.addEventListener('click', (e) => {
     imgModal.style.display = 'none';
   }
 });
+
+/*=============== SHOW MORE/LESS PROJECTS ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+  const projectsContainer = document.querySelector('.projects__container');
+  const allProjectCards = document.querySelectorAll('.projects__card');
+  const projectsSection = document.querySelector('.projects.section');
+  
+  // Buat button
+  const showMoreBtn = document.createElement('button');
+  showMoreBtn.className = 'button show-more-btn';
+  showMoreBtn.innerHTML = '<span>Show More Projects</span> <i class="ri-arrow-down-s-line"></i>';
+  
+  // Tambahkan button setelah projects container
+  projectsSection.appendChild(showMoreBtn);
+  
+  // Sembunyikan project setelah index 5 (tampilkan hanya 6 pertama)
+  allProjectCards.forEach((card, index) => {
+    if (index >= 6) {
+      card.style.display = 'none';
+    }
+  });
+  
+  // Track state
+  let isExpanded = false;
+  
+  // Event listener untuk button
+  showMoreBtn.addEventListener('click', function() {
+    isExpanded = !isExpanded;
+    
+    allProjectCards.forEach((card, index) => {
+      if (index >= 6) {
+        card.style.display = isExpanded ? 'block' : 'none';
+      }
+    });
+    
+    // Update button text dan icon
+    if (isExpanded) {
+      showMoreBtn.innerHTML = '<span>Show Less</span> <i class="ri-arrow-up-s-line"></i>';
+    } else {
+      showMoreBtn.innerHTML = '<span>Show More Projects</span> <i class="ri-arrow-down-s-line"></i>';
+      // Scroll ke section projects saat collapse
+      projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});

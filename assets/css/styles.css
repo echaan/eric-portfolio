@@ -1116,3 +1116,55 @@ svg {
 .img-modal__close:hover {
   transform: scale(1.2);
 }
+
+/*=============== SHOW MORE BUTTON ===============*/
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem auto 0;
+  position: relative;
+  overflow: hidden;
+  transition: all .4s ease;
+}
+
+.show-more-btn i {
+  font-size: 1.25rem;
+  transition: transform .3s ease;
+}
+
+.show-more-btn:hover i {
+  transform: translateY(2px);
+}
+
+.show-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left .5s;
+}
+
+.show-more-btn:hover::before {
+  left: 100%;
+}
+
+/* Animation for showing/hiding projects */
+.projects__card {
+  animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
